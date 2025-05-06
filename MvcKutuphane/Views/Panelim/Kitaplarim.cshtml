@@ -1,0 +1,114 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLHAREKET>
+@{
+    ViewBag.Title = "Kitaplarım";
+    Layout = "~/Views/Shared/_LayoutPanelim.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+<style>
+    body {
+        background: #f8f9fa;
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #dd3b3b;
+    }
+
+    .item {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .item-header {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #dd3b3b;
+        margin-bottom: 1rem;
+    }
+
+    .item-details {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-action {
+        background-color: #28a745;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-action:hover {
+        background-color: #218838;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .col {
+        flex-basis: calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+
+    @@media (max-width: 768px) {
+        .col {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="section-header">
+        <h2>Kitap Geçmişim</h2>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="item">
+                    <div class="item-header">@item.TBLKITAP.AD</div>
+                    <div class="item-details">
+                        <p><strong>Alış Tarihi:</strong> @Convert.ToDateTime(item.ALISTARIH).ToString("dd/MM/yyyy")</p>
+                        <p><strong>Üye İade Tarihi:</strong> @Convert.ToDateTime(item.UYEGETIRTARIH).ToString("dd/MM/yyyy")</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

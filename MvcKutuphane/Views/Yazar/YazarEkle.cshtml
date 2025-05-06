@@ -1,0 +1,30 @@
+﻿@model MvcKutuphane.Models.Entity.TBLYAZAR
+
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Yazar Ekleme Sayfası</h2>
+</div>
+
+<form method="post" class="p-4 border rounded shadow-sm" style="max-width: 600px; margin: auto;">
+    <div class="mb-3">
+        <label class="form-label fw-bold">Yazar Adı</label>
+        @Html.TextBoxFor(x => x.AD, new { @class = "form-control", @placeholder = "Yazar Adı Giriniz" })
+        @Html.ValidationMessageFor(y => y.AD,null, new { style = "color:red" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Yazar Soyadı</label>
+        @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control", @placeholder = "Yazar Soyadı Giriniz" })
+        @Html.ValidationMessageFor(y => y.SOYAD, null, new { style = "color:red" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Yazar Bilgileri</label>
+        @Html.TextAreaFor(x => x.DETAY, new { @class = "form-control", @placeholder = "Yazar Bilgilerini Giriniz" })
+        @Html.ValidationMessageFor(y => y.DETAY, null, new { style = "color:red" })
+    </div>
+    <button type="submit" class="btn btn-warning w-100">Yazar Ekle</button>
+</form>
+

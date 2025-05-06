@@ -1,0 +1,174 @@
+﻿@model MvcKutuphane.Models.Entity.TBLUYELER
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPanelim.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6 text-center">
+                    <h1>Üye Sayfası</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card card-primary card-outline">
+                        <div class="card-body box-profile">
+                            <div class="text-center">
+                                <img class="profile-user-img img-fluid img-circle" style=" width: 200px; height: 140px;" src="@ViewBag.fotograf" alt="User profile picture">
+                            </div>
+                            <h3 class="profile-username text-center">@ViewBag.ad @ViewBag.soyad</h3>
+                            <p class="text-muted text-center">Kütüphane Üyesi</p>
+                            <ul class="list-group list-group-unbordered mb-3">
+                                <li class="list-group-item">
+                                    <b>Okunan Kitap Sayısı:</b> <a class="float-right">@ViewBag.OkunanKitap</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Gelen Kutusu:</b> <a class="float-right">@ViewBag.gelenKutusu </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Duyuru Sayısı:</b> <a class="float-right">@ViewBag.duyuruSayisi</a>
+                                </li>
+                            </ul>
+                            <a href="/Mesajlar/GelenMesaj" class="btn btn-primary btn-block"><b>Gelen Kutusu</b></a>
+                        </div>
+                    </div>
+
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Hakkımda</h3>
+                        </div>
+                        <div class="card-body">
+                            <strong><i class="fas fa-book mr-1"></i>Eğitim</strong>
+                            <p class="text-muted">
+                                @ViewBag.okul
+                            </p>
+                            <hr>
+                            <strong><i class="fas fa-phone-alt mr-1"></i>Telefon</strong>
+                            <p class="text-muted">@ViewBag.telefon</p>
+                            <hr>
+                            <strong><i class="fas fa-pencil-alt mr-1"></i> Kullanııc Adı</strong>
+                            <p class="text-muted">
+                             @ViewBag.kullaniciadi
+                            </p>
+                            <hr>
+                            <strong><i class="far fa-file-alt mr-1"></i> Mail Adresi</strong>
+                            <p class="text-muted">@ViewBag.mail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <h5 class="m-2 fw-bold">Bilgilerim</h5>
+                        </div>
+                        <div class="card-body">
+                            @using (Html.BeginForm("Güncelle", "Panelim", FormMethod.Post))
+                            {
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Ad:</label>
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Soyad:</label>
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Kullanıcı Adı:</label>
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Şifre:</label>
+                                    <div class="col-sm-10 position-relative">
+                                        @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control", id = "sifreInput", type = "password" })
+                                        <span onclick="togglePassword()" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                                            👁️
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Fotoğraf:</label>
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Okul:</label>
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="offset-sm-2 col-sm-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Şartları okudum <a href="#">kabul ediyorum</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="offset-sm-2 col-sm-10">
+                                        <button type="submit" class="btn btn-danger">Güncelle</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function togglePassword() {
+                        var input = document.getElementById("sifreInput");
+                        input.type = input.type === "password" ? "text" : "password";
+                    }
+                </script>
+
+            </div>
+        </div>
+    </section>
+
+
+   
+
+    <script>
+        function togglePassword() {
+            var input = document.getElementById("sifreInput");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+    </script>
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <script src="../../dist/js/demo.js"></script>
+</body>
+</html>

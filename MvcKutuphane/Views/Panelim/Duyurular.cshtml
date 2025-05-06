@@ -1,0 +1,128 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLDUYURULAR>
+@{
+    ViewBag.Title = "Duyurular";
+    Layout = "~/Views/Shared/_LayoutPanelim.cshtml";
+}
+
+<style>
+    body {
+        background: #eef2f7;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .announcement-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .announcement-card {
+        background: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .announcement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+    .announcement-category {
+        background: #6c63ff;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        display: inline-block;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .announcement-content {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+        min-height: 100px;
+    }
+
+    .announcement-date {
+        font-size: 0.85rem;
+        color: #999;
+        margin-bottom: 1rem;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .btn-action {
+        flex: 1;
+        border-radius: 1rem;
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
+    .add-btn {
+        background: #6c63ff;
+        color: white;
+        border-radius: 2rem;
+        padding: 0.8rem 2rem;
+        font-weight: bold;
+        transition: background 0.3s;
+        margin-bottom: 2rem;
+        display: inline-block;
+    }
+
+        .add-btn:hover {
+            background: #5a54e6;
+        }
+
+    .empty-message {
+        text-align: center;
+        color: #999;
+        padding: 2rem 0;
+        font-size: 1.2rem;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="text-black text-center py-4">
+        <h2 class="mb-0 font-weight-bold">Duyuru Listesi</h2>
+    </div>
+
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="announcement-container">
+            @foreach (var item in Model)
+            {
+                <div class="announcement-card">
+                    <div>
+                        <div class="announcement-category">@item.KATEGORI</div>
+                        <div class="announcement-content">@item.ICERIK</div>
+                        <div class="announcement-date">
+                            📅 @Convert.ToDateTime(item.TARIH).ToString("dd MMM yyyy")
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-message">
+            Şu anda hiç duyuru bulunmamaktadır.
+        </div>
+    }
+</div>
+
+
+
+

@@ -1,0 +1,102 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLDUYURULAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    body {
+        background: #f4f7fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #0d6efd, #3a86ff);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-outline-primary {
+        border-radius: 2rem;
+    }
+
+    .btn-sm {
+        border-radius: 1rem;
+        padding: 0.35rem 1rem;
+    }
+
+    table {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    td, th {
+        vertical-align: middle !important;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f0f4ff;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-header text-white text-center py-4">
+            <h2 class="mb-0"> Duyurular Listesi</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/Duyuru/DuyuruEkle" class="btn btn-primary px-4 py-2">
+                    + Yeni Duyuru Ekle
+                </a>
+            </div>
+            <div class="table-responsive rounded-3">
+                <table class="table table-bordered table-hover text-center align-middle bg-white">
+                    <thead class="table-primary">
+                        <tr>
+                            <th style="width:5%">Duyuru No</th>
+                            <th style="width:15%">Kategori</th>
+                            <th style="width:45%">İçerik</th>
+                            <th style="width:10%">Tarih</th>
+                            <th style="width:10%">Sil</th>
+                            <th style="width:10%">Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.KATEGORI</td>
+                                <td>@item.ICERIK</td>
+                                <td>@Convert.ToDateTime(item.TARIH).ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <a href="/Duyuru/DuyuruSil/@item.ID" class="btn btn-danger ">
+                                        🗑 Sil
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/Duyuru/DuyuruGetir/@item.ID" class="btn btn-success ">
+                                        ✏ Güncelle
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

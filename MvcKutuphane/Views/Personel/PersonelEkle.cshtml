@@ -1,0 +1,21 @@
+﻿@model MvcKutuphane.Models.Entity.TBLPERSONEL
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Personel Ekleme Sayfası</h2>
+</div>
+
+<form method="post" class="p-4 border rounded shadow-sm" style="max-width: 600px; margin: auto;">
+    <div class="mb-3">
+        <label class="form-label fw-bold">Personel Adı</label>
+        @Html.TextBoxFor(m => m.PERSONAL, new { @class = "form-control", placeholder = "Personel Adı" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.PERSONAL, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <button type="submit" class="btn btn-warning w-100">Kategori Ekle</button>
+</form>
+

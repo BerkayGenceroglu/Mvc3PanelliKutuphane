@@ -1,0 +1,111 @@
+﻿@model  List<MvcKutuphane.Models.Entity.TBLPERSONEL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #0d6efd, #3a86ff);
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+        .card-header h2 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+    .btn-primary {
+        border-radius: 2rem;
+        padding: 0.5rem 1.5rem;
+        font-weight: 500;
+    }
+
+    .btn-sm {
+        border-radius: 1rem;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.875rem;
+    }
+
+    .table {
+        border-radius: 0.75rem;
+        overflow: hidden;
+    }
+
+    thead th {
+        background-color: #e9f2ff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    tbody tr:hover {
+        background-color: #f1f5ff;
+    }
+
+    td, th {
+        vertical-align: middle !important;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            <h2>Personel Listesi</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/Personel/PersonelEkle" class="btn btn-primary">
+                    <i class="bi bi-plus-circle me-2"></i>Yeni Personel Ekle
+                </a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center bg-white align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>PERSONAL ID</th>
+                            <th>PERSONAL AD</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.PERSONAL</td>
+                                <td>
+                                    <a href="/Personel/PersonelSil/@item.ID" class="btn btn-danger ">
+                                        🗑 Sil
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/Personel/PersonelGetir/@item.ID" class="btn btn-success">
+                                        ✏ Güncelle
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,156 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLKITAP>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<style>
+    body {
+        background: #f4f7fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #0d6efd, #3a86ff);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-outline-primary {
+        border-radius: 2rem;
+    }
+
+    .btn-sm {
+        border-radius: 1rem;
+        padding: 0.35rem 1rem;
+    }
+
+    table {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    td, th {
+        vertical-align: middle !important;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f0f4ff;
+    }
+
+    /* Arama kutusunun stilini iyileştirme */
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .search-container {
+        position: relative;
+    }
+
+    .search-container input {
+        width: 100%;
+        max-width: 400px;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .search-container input:focus {
+        outline: none;
+        border-color: #0d6efd;
+        box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+    }
+
+    .search-container .search-icon {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        font-size: 1.25rem;
+        color: #0d6efd;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="search-container">
+       @using (Html.BeginForm("Index", "Kitap", FormMethod.Get))
+        {
+            <b style="display: inline-block; margin-left:20px; margin-bottom:5px">Aranacak Kitap Adını Girin: &nbsp;</b>@Html.TextBox("p")
+            <button type="submit" class="btn btn-outline-primary ms-2">Ara</button>
+        }
+    </div>
+    <div class="card shadow-lg">
+        <div class="card-header text-white text-center py-4">
+            <h2 class="mb-0"> Kitap Listesi</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/Kitap/KitapEkle" class="btn btn-primary px-4 py-2">
+                    + Yeni Kitap Ekle
+                </a>
+            </div>
+            <div class="table-responsive rounded-3">
+                <table class="table table-bordered table-hover text-center align-middle bg-white">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>ID</th>
+                            <th>Kitap Adı</th>
+                            <th>Kitap Yazarı</th>
+                            <th>Kategori</th>
+                            <th>Basım Yılı</th>
+                            <th>Yayınevi</th>
+                            <th>Sayfa</th>
+                            <th>Durum</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.AD</td>
+                                <td>@item.TBLYAZAR.AD&nbsp @item.TBLYAZAR.SOYAD</td>
+                                <td>@item.TBLKATEGORI.AD</td>
+                                <td>@item.BASIMYIL</td>
+                                <td>@item.YAYINEVI</td>
+                                <td>@item.SAYFA</td>
+                                <td>@item.DURUM</td>
+                                <td>
+                                    <a href="/Kitap/KitapSil/@item.ID" class="btn btn-danger ">🗑 Sil</a>
+                                </td>
+                                <td>
+                                    <a href="/Kitap/KitapGetir/@item.ID" class="btn btn-success">✏ Güncelle</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

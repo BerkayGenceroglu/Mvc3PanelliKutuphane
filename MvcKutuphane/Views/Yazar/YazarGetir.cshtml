@@ -1,0 +1,33 @@
+﻿@model MvcKutuphane.Models.Entity.TBLYAZAR
+@{
+    ViewBag.Title = "YazarGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Yazar Güncelleme Sayfası</h2>
+</div>
+
+@using (Html.BeginForm("YazarGuncelle", "Yazar", FormMethod.Post))
+{
+    <div class="p-4 border rounded shadow-sm bg-light" style="max-width: 600px; margin: auto;">
+        <div class="mb-3">
+            @Html.LabelFor(x => x.ID, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.ID, new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.AD, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.AD, new { @class = "form-control"})
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.SOYAD, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control"})
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.DETAY, new { @class = "form-label fw-bold" })
+            @Html.TextAreaFor(x => x.DETAY, new { @class = "form-control"})
+        </div>
+        <button type="submit" class="btn btn-primary w-100 fw-bold">Yazarı Güncelle</button>
+    </div>
+}
+

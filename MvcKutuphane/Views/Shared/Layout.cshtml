@@ -1,0 +1,150 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Admin Paneli</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 10px 14px 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: cornflowerblue;
+}
+
+.main {
+  margin-left: 240px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar p-3">
+        <div class="d-flex flex-column">
+            <a href="/Grafik/Anasayfa" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-home" style="font-size:24px;"></i>
+                <span>Anasayfa</span>
+            </a>
+            <a href="/Kategori/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-th-list" style="font-size:24px;"></i>
+                <span>Kategoriler</span>
+            </a>
+            <a href="/Kitap/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-book" style="font-size:24px;"></i>
+                <span>Kitaplar</span>
+            </a>
+            <a href="/Yazar/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-user-edit" style="font-size:24px;"></i>
+                <span>Yazarlar</span>
+            </a>
+            <a href="/Uye/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-users" style="font-size:20px;"></i>
+                <span>Üyeler</span>
+            </a>
+            <a href="/Personel/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-id-badge" style="font-size: 20px;"></i>
+                <span>Personeller</span>
+            </a>
+            @if (User.IsInRole("A"))
+            {
+            <a href="/Odunc/OduncVer" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-book-medical" style="font-size: 20px;"></i>
+                <span>Ödünç Kitap Ver</span>
+            </a>
+            <a href="/Odunc/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-book-reader" style="font-size: 20px;"></i>
+                <span>Ödünç Kitap Al</span>
+            </a>
+            }
+            <a href="/Duyuru/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-bell" style="font-size: 20px;"></i>
+                <span>Duyurular</span>
+            </a>
+            <a href="/islem/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-exchange-alt" style="font-size: 20px;"></i>
+                <span>İşlemler</span>
+            </a>
+            <a href="/istatistik/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-chart-bar" style="font-size: 20px;"></i>
+                <span>İstatistikler</span>
+            </a>
+            <a href="/istatistik/LinqKart" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-barcode" style="font-size: 20px;"></i>
+                <span>Linq Kartlar</span>
+            </a>
+            <a href="/vitrin/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-store" style="font-size: 20px;"></i>
+                <span>Vitrin</span>
+            </a>
+            <a href="/istatistik/Fotograflar" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-image" style="font-size: 20px;"></i>
+                <span>Fotoğraflar</span>
+            </a>
+            <a href="/istatistik/HavaDurum" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-cloud-sun" style="font-size: 20px;"></i>
+                <span>Hava Durumu</span>
+            </a>
+            <a href="/istatistik/HavaKart" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-clone" style="font-size: 20px;"></i>
+                <span>Hava Kartları</span>
+            </a>
+            <a href="/Grafik/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-cogs" style="font-size: 20px;"></i>
+                <span>Grafik</span>
+            </a>
+            <a href="/Ayarlar/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-cogs" style="font-size: 20px;"></i>
+                <span>Ayarlar</span>
+            </a>
+            <a href="/Yardım/Index" class="d-flex align-items-center gap-2 mb-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-question-circle" style="font-size: 20px;"></i>
+                <span>Yardım</span>
+            </a>
+            <a href="/Panelim/Logout" class="d-flex align-items-center gap-2 text-decoration-none text-white">
+                <i class="fa fa-fw fa-sign-out-alt" style="font-size: 20px;"></i>
+                <span>Çıkış</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+        <div class="main">
+            @RenderBody()
+        </div>
+
+
+</body>
+</html>

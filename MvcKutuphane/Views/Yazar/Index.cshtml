@@ -1,0 +1,145 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLYAZAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #0d6efd, #3a86ff);
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+        .card-header h2 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+    .btn-primary {
+        border-radius: 2rem;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .btn-sm {
+        border-radius: 1.5rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .table {
+        border-radius: 0.75rem;
+        overflow: hidden;
+    }
+
+    thead th {
+        background-color: #e9f2ff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+    }
+
+    tbody tr:hover {
+        background-color: #f1f5ff;
+    }
+
+    td, th {
+        vertical-align: middle !important;
+    }
+
+    /* Tablo hücrelerinin genişliğini sınırlayalım */
+    .table td, .table th {
+        max-width: 1000px; /* Hücreler için bir genişlik limiti ekledik */
+        word-wrap: break-word; /* Metin taşarsa satıra geçsin */
+    }
+
+    /* Sil ve Güncelle butonları için düzenleme */
+    .btn {
+        white-space: nowrap; /* Buton metninin taşmaması için */
+    }
+
+    .btn-danger, .btn-success {
+        padding: 0.4rem 1rem;
+        font-size: 1rem; /* Buton boyutunu biraz daha büyütme */
+    }
+</style>
+
+
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            <h2>Yazar Listesi</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/Yazar/YazarEkle" class="btn btn-primary">
+                    <i class="bi bi-plus-circle me-2"></i>Yeni Yazar Ekle
+                </a>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center bg-white align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+                            <th>Detay</th>
+                            <th>Kitaplar</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.AD</td>
+                                <td>@item.SOYAD</td>
+                                <td>@item.DETAY</td>
+                                <td>
+                                    <a href="/Yazar/YazarKitaplar/@item.ID" class="btn btn-default" style="background-color:darkslateblue;color:white">
+                                        <i class="bi bi-pencil-square me-1"></i>Kitaplar
+                                    </a>
+                                </td>
+                                <td>
+                                    @Html.ActionLink("🗑 Sil", "YazarSil", "Yazar", new { id = item.ID },
+                                    new { @class = "btn btn-danger", onclick = "return confirm('Silmek istediğinize emin misiniz?')" })
+                                    @*4. new { id = item.ID }
+                                        Bu kısım route parametreleridir. Burada item.ID değeri, URL’ye id parametresi olarak eklenir:*@
+                                </td>
+                                <td>
+                                    <a href="/Yazar/YazarGetir/@item.ID" class="btn btn-success">
+                                        <i class="bi bi-pencil-square me-1"></i> ✏ Güncelle
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

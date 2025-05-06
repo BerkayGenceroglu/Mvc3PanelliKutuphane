@@ -1,0 +1,130 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLHAREKET>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<style>
+    body {
+        background: #f4f7fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .card-header {
+        background-color:red;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-outline-primary {
+        border-radius: 2rem;
+    }
+
+    .btn-sm {
+        border-radius: 1rem;
+        padding: 0.35rem 1rem;
+    }
+
+    table {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    td, th {
+        vertical-align: middle !important;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f0f4ff;
+    }
+
+    /* Arama kutusunun stilini iyileştirme */
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .search-container {
+        position: relative;
+    }
+
+        .search-container input {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+        }
+
+            .search-container input:focus {
+                outline: none;
+                border-color: #0d6efd;
+                box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+            }
+
+        .search-container .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+            color: #0d6efd;
+            cursor: pointer;
+        }
+</style>
+
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-header text-white text-center py-4">
+            <h2 class="mb-0"> Ödünç Verilmiş Kitap Listesi</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="table-responsive rounded-3">
+                <table class="table table-bordered table-hover text-center align-middle bg-white">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>İşlem ID</th>
+                            <th>Kitap Adı</th>
+                            <th>Üye Adı</th>
+                            <th>Personel Adı</th>
+                            <th>Alış Tarihi</th>
+                            <th>İade Tarihi</th>
+                            <th>İade Al</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.TBLKITAP.AD</td>
+                                <td>@item.TBLUYELER.AD&nbsp @item.TBLUYELER.SOYAD</td>
+                                <td>@item.TBLPERSONEL.PERSONAL</td>
+                                <td>@Convert.ToDateTime(item.ALISTARIH).ToString("dd/MM/yyyy")</td>
+                                <td>@Convert.ToDateTime(item.IADETARIH).ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <a href="/Odunc/OduncIade/@item.ID" class="btn btn-default" style="background-color:darkcyan;color:white">Kitabı İade Al</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,56 @@
+﻿@model  MvcKutuphane.Models.Entity.TBLHAREKET
+@{
+    ViewBag.Title = "OduncIade";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Personel Güncelleme Sayfası</h2>
+</div>
+
+@using (Html.BeginForm("OduncGuncelle", "Odunc", FormMethod.Post))
+{
+    <div class="p-4 border rounded shadow-sm bg-light" style="max-width: 600px; margin: auto;">
+        <div class="mb-3">
+            <label>Hareket ID</label>
+            @Html.TextBoxFor(x => x.ID, new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            <label>Kitap Adı</label>
+            @Html.TextBoxFor(x => x.TBLKITAP.AD, new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            <label>Üye Adı</label>
+            @Html.TextBoxFor(x => x.TBLUYELER.AD, new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            <label>Personel Adı</label>
+            @Html.TextBoxFor(x => x.TBLPERSONEL.PERSONAL, new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            <label>Alış Tarihi</label>
+            @Html.TextBoxFor(x => x.ALISTARIH, "{0:dd.MM.yyyy}", new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            <label>İade Tarihi</label>
+            @Html.TextBoxFor(x => x.IADETARIH, "{0:dd.MM.yyyy}", new { @class = "form-control", })
+        </div>
+        <div class="mb-3">
+            <label>Üyenin Getirdiği Tarih</label>
+            <input type="text" class="form-control" name="UYEGETIRTARIH" value="@DateTime.Now.ToShortDateString()" />
+        </div>
+        <div class="mb-3">
+            <label>Geciken Gün Sayısı</label>
+            @if (ViewBag.dgr.Contains("Gecikmiştir"))
+            {
+                <input type="text" class="form-control text-white fw-bold" style="background-color: red;" value="@ViewBag.dgr" />
+
+            }
+            else
+            {
+                <input type="text" class="form-control text-white fw-bold" style="background-color: forestgreen;" value="@ViewBag.dgr" />
+            }
+        </div>
+        <button type="submit" class="btn btn-primary w-100 fw-bold">Kitabı İade Al </button>
+    </div>
+}

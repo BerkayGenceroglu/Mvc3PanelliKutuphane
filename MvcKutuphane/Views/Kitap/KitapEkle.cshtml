@@ -1,0 +1,39 @@
+﻿@model MvcKutuphane.Models.Entity.TBLKITAP
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Kitap Ekleme Sayfası</h2>
+</div>
+
+<form method="post" class="p-4 border rounded shadow-sm" style="max-width: 600px; margin: auto;">
+    <div class="mb-3">
+        <label class="form-label fw-bold">Kitap Adı</label>
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control", @placeholder = "Kitap Adı Giriniz" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Kitap Kategori</label>
+        @Html.DropDownListFor(k => k.TBLKATEGORI.ID, (List<SelectListItem>)ViewBag.Category, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Kitap Yazar</label>
+        @Html.DropDownListFor(k => k.TBLYAZAR.ID, (List<SelectListItem>)ViewBag.YAZAR, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Basım Yılı</label>
+        @Html.TextBoxFor(y => y.BASIMYIL, new { @class = "form-control", @placeholder = "Kitap Basım Yılını  Giriniz" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Yayınevi</label>
+        @Html.TextBoxFor(y => y.YAYINEVI, new { @class = "form-control", @placeholder = "Kitap'ın Yayınevini Giriniz" })
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Sayfa</label>
+        @Html.TextBoxFor(y => y.SAYFA, new { @class = "form-control", @placeholder = "Kitap'ın Sayfa Sayısını Giriniz" })
+    </div>
+    <button class="btn btn-warning w-100">Kitap Ekle</button>
+    <input type="hidden" name="DURUM" value="True" />
+</form>
+

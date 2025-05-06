@@ -1,0 +1,71 @@
+﻿@model MvcKutuphane.Models.Entity.TBLUYELER
+
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Üye Ekleme Sayfası</h2>
+</div>
+
+<form method="post" class="p-4 border rounded shadow-sm" style="max-width: 600px; margin: auto;">
+    <div class="mb-3">
+        <label class="form-label fw-bold">Üye Adı</label>
+        @Html.TextBoxFor(m => m.AD, new { @class = "form-control", placeholder = "Üye Adı" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.AD, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Üye Soyadı</label>
+        @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control", placeholder = "Üye Soyadı" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.SOYAD, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Mail</label>
+        @Html.TextBoxFor(m => m.MAIL, new { @class = "form-control", placeholder = "Mail" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.MAIL, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Kullanıcı Adı</label>
+        @Html.TextBoxFor(m => m.KULLANICIADI, new { @class = "form-control", placeholder = "Kullanıcı Adı" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.KULLANICIADI, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Şifre</label>
+        @Html.TextBoxFor(m => m.SIFRE, new { @class = "form-control", placeholder = "Şifre" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.SIFRE, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Fotoğraf</label>
+        @Html.TextBoxFor(m => m.FOTOGRAF, new { @class = "form-control", placeholder = "Fotoğraf" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.FOTOGRAF, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Telefon</label>
+        @Html.TextBoxFor(m => m.TELEFON, new { @class = "form-control", placeholder = "Telefon" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.TELEFON, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label fw-bold">Okul</label>
+        @Html.TextBoxFor(m => m.OKUL, new { @class = "form-control", placeholder = "Okul" })
+        <div class="text-danger" style="min-height: 25px;">
+            @Html.ValidationMessageFor(m => m.OKUL, "", new { @class = "d-block" })
+        </div>
+    </div>
+    <button type="submit" class="btn btn-warning w-100">Üye Ekle</button>
+</form>

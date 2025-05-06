@@ -1,0 +1,53 @@
+﻿@model MvcKutuphane.Models.Entity.TBLUYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="text-center my-4">
+    <h2 class="fw-bold text-primary">Üye Güncelleme Sayfası</h2>
+</div>
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <div class="p-4 border rounded shadow-sm bg-light" style="max-width: 600px; margin: auto;">
+        <div class="mb-3">
+            @Html.LabelFor(x => x.ID, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.AD, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.SOYAD, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.SOYAD, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.MAIL, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.MAIL, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.KULLANICIADI, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.SIFRE, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.SIFRE, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.FOTOGRAF, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.TELEFON, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.TELEFON, new { @class = "form-control" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(x => x.OKUL, new { @class = "form-label fw-bold" })
+            @Html.TextBoxFor(x => x.OKUL, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-primary w-100 fw-bold">Üye Güncelle</button>
+    </div>
+}
+

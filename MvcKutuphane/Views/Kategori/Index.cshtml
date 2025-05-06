@@ -1,0 +1,100 @@
+﻿@model List<MvcKutuphane.Models.Entity.TBLKATEGORI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<style>
+    body {
+        background: #f4f7fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #0d6efd, #3a86ff);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-outline-primary {
+        border-radius: 2rem;
+    }
+
+    .btn-sm {
+        border-radius: 1rem;
+        padding: 0.35rem 1rem;
+    }
+
+    table {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    td, th {
+        vertical-align: middle !important;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f0f4ff;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-header text-white text-center py-4">
+            <h2 class="mb-0"> Kategori Listesi</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/Kategori/KategoriEkle" class="btn btn-primary px-4 py-2">
+                    + Yeni Kategori Ekle
+                </a>
+            </div>
+            <div class="table-responsive rounded-3">
+                <table class="table table-bordered table-hover text-center align-middle bg-white">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Kategori ID</th>
+                            <th>Kategori Adı</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.AD</td>
+                                <td>
+                                    <a href="/Kategori/KategoriSil/@item.ID" class="btn btn-danger ">
+                                        🗑 Sil
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/Kategori/KategoriGuncelle/@item.ID" class="btn btn-success ">
+                                        ✏ Güncelle
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

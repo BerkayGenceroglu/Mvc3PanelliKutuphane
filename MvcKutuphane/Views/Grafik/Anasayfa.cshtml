@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kütüphane Yönetim Sistemine Hoşgeldiniz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://images.unsplash.com/photo-1522211988038-6fcbb8c12c7e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px 60px;
+            border-radius: 15px;
+            max-width: 90%;
+            max-height: 80%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .container:hover {
+                transform: scale(1.05);
+            }
+
+        .welcome-message h1 {
+            font-size: 3.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            letter-spacing: 3px;
+            line-height: 1.4;
+        }
+
+        .welcome-message p {
+            font-size: 1.2em;
+            color: #f1f1f1;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .btn-start {
+            display: inline-block;
+            background-color: #ff7f50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            margin-top: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-start:hover {
+                background-color: #e07b43;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Kütüphane Yönetim Sistemine Hoşgeldiniz</h1>
+            <p>Sistemimiz işlemlerinizi kolaylaştırmak üzere tasarlanmıştır. İyi çalışmalar dileriz.</p>
+        </div>
+    </div>
+</body>
+</html>
