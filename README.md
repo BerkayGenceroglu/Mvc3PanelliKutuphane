@@ -19,7 +19,7 @@ Bu sayfa aracılığıyla yöneticiler aşağıdaki işlemleri gerçekleştirebi
 Bu sayfa, kütüphanedeki tüm kayıtlı kitapların bir listesini sunar ve bu kitapların yönetilmesine olanak tanır. Kullanıcılar bu sayfa üzerinden kitap bilgilerini görüntüleyebilir, yeni kitap ekleyebilir, mevcut kitapları silebilir veya güncelleyebilirler. Ayrıca, her bir kitabın kütüphanedeki mevcut durumu hakkında da bilgi sahibi olabilirler.
 5.Yazar Listesi
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c991bb19-949c-4b65-a174-a8f657a7b185" alt="Resim 1" width="250" style="margin-right: 10px;" />
-  <img src="https://github.com/user-attachments/assets/3c9b6c06-d62a-40ca-be5d-cf8c7dd7e7f4" alt="Resim 2" width="250" />
+  <img src="https://github.com/user-attachments/assets/c991bb19-949c-4b65-a174-a8f657a7b185" alt="Resim 1" width="%50" style="margin-right: 10px;" />
+  <img src="https://github.com/user-attachments/assets/3c9b6c06-d62a-40ca-be5d-cf8c7dd7e7f4" alt="Resim 2" width="%50" />
 </p>
 Bu sayfa, sistemde kayıtlı olan tüm yazarların bir listesini görüntüler ve yazarların yönetilmesine olanak tanır. Listelenen yazarların her birinin yanında bulunan "Kitaplar" bağlantısına tıklayarak, o yazara ait kütüphanede bulunan tüm kitaplara kolayca erişilebilir. Kütüphanedeki kitapların yazarlarına göre düzenlenmesi ve yönetilmesi için önemli bir araçtır.
