@@ -11,42 +11,43 @@ Bu sayfa, uygulamanın yönetim paneline erişim sağlamak için kullanılır. Y
 ![image](https://github.com/user-attachments/assets/71af6783-3a4d-4db0-b02f-2d5b874da4fc)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin kullanıcı girişinden sonra karşılaşılan ilk ekranıdır. Sistem hakkında genel bir bakış sunar ve kullanıcılara temel işlevlere hızlı erişim imkanı tanır.
 ### 3.Kategori Listesi
-![image](https://github.com/user-attachments/assets/6a753f7b-617d-4055-8010-a535bd923b5b)
+![kategori](https://github.com/user-attachments/assets/fc5ba602-6e98-483c-9dbf-6c9364488d7e)
 Bu sayfa aracılığıyla yöneticiler aşağıdaki işlemleri gerçekleştirebilir:
 -Yeni Kategori Ekleme: Sisteme yeni kitap kategorileri tanımlayabilirler.
 -Kategori Silme: Mevcut kategorileri sistemden silebilirler (dikkatli olunmalıdır, çünkü bu kategoriye bağlı kitaplar da etkilenebilir).
 -Kategori Güncelleme: Mevcut kategorilerin adlarını veya diğer ilgili bilgilerini düzenleyebilirler.
 ### 4.Kitap Listesi
-![image](https://github.com/user-attachments/assets/b5d2d92d-b47d-4bd6-9e83-5c54de736de6)
+![kitap](https://github.com/user-attachments/assets/419c3b88-38cc-45ba-8018-c8d3eef61fa8)
 Bu sayfa, kütüphanedeki tüm kayıtlı kitapların bir listesini sunar ve bu kitapların yönetilmesine olanak tanır. Kullanıcılar bu sayfa üzerinden kitap bilgilerini görüntüleyebilir, yeni kitap ekleyebilir, mevcut kitapları silebilir veya güncelleyebilirler. Ayrıca, her bir kitabın kütüphanedeki mevcut durumu hakkında da bilgi sahibi olabilirler.
 ### 5.Yazar Listesi
-![image](https://github.com/user-attachments/assets/912db8fe-7444-490b-b2a3-2044f308d87f)
-![image](https://github.com/user-attachments/assets/503a3801-65ad-45e2-aeb7-e5f90fbb13cd)
+![yazar](https://github.com/user-attachments/assets/7f0dfa09-8c3f-41e1-b2bd-2b48276bd4fc)
+![yazardetay](https://github.com/user-attachments/assets/e9574f42-7f8a-48ef-b1e8-b79f48b5c62a)
 Bu sayfa, sistemde kayıtlı olan tüm yazarların bir listesini görüntüler ve yazarların yönetilmesine olanak tanır. Listelenen yazarların her birinin yanında bulunan "Kitaplar" bağlantısına tıklayarak, o yazara ait kütüphanede bulunan tüm kitaplara kolayca erişilebilir. Kütüphanedeki kitapların yazarlarına göre düzenlenmesi ve yönetilmesi için önemli bir araçtır.
 ### 6.Üye Listesi
-![image](https://github.com/user-attachments/assets/68467aa7-b15e-40b5-bef4-e98df5bf0121)
-![image](https://github.com/user-attachments/assets/c40e7e57-4b5d-4b7e-9bb2-66b520fe5815)
+![üye](https://github.com/user-attachments/assets/7da4eb6a-24ad-415e-800e-082562b6a049)
+![üyebilgi](https://github.com/user-attachments/assets/c59208c9-38e7-4b9a-9ca8-c41410d509b0)
 Bu sayfa, kütüphaneye kayıtlı olan tüm üyelerin bir listesini görüntüler ve üye kayıtlarının yönetilmesine olanak tanır. Kütüphane kullanıcılarının bilgilerinin takip edilmesi ve yönetilmesi için temel bir araçtır.Ayrıca Kullanıcılar Kitap Geçmişi 
 butonuna tıklayarak,listedeki her bir üyenin kütüphanedeki ödünç alma ve iade geçmişine ulaşabilirler.
 ### 7.Personel Listesi
-![image](https://github.com/user-attachments/assets/e935a8f0-392a-4f73-abb2-f0163a972eea)
+![personel](https://github.com/user-attachments/assets/bc771933-36c4-438b-9bc9-343058c236ed)
 Bu sayfa, Kütüphane Yönetim Sistemi'nde kayıtlı personellerin ID ve ad gibi temel bilgilerini listeleyen, her bir kayıt için silme ve güncelleme işlemlerini mümkün kılan, aynı zamanda yeni personel ekleme işlevselliğini sağlayan temel bir personel yönetim ekranıdır.
 ### 8.Kitap Ödünç Verme
-![image](https://github.com/user-attachments/assets/1c8a783b-20d6-430d-9419-3d280e96cf59)
+![kitapödünç](https://github.com/user-attachments/assets/4ed9cac6-22d0-43c4-b5cb-a158fa627ed0)
 Bu sayfa, Kütüphane Yönetim Sistemi'nde kitap ödünç verme işleminin gerçekleştirildiği arayüzdür. Üye Adı, Kitap Adı, Personel Adı, Alış Tarihi ve İade Tarihi gibi ödünç verme işlemine ait bilgilerin girildiği alanları içerir ve "İşlemi Gerçekleştir" butonu aracılığıyla ödünç verme işlemini tamamlar.
 ### 9.Ödünç Verilmiş Kitap Listesi
-![image](https://github.com/user-attachments/assets/df5fb0a1-9caf-4c52-abe1-66e808bf92ed)
+![ödünçliste](https://github.com/user-attachments/assets/0b1b068c-f6d2-4f0a-a41f-faa81c1e3742)
 Bu sayfa, Kütüphane Yönetim Sistemi'nde ödünç verilmiş kitapların listesini sunmaktadır. Tabloda İşlem ID, Kitap Adı, Üye Adı, Personel Adı, Alış Tarihi, İade Tarihi ve "Kitabı İade Al" butonu gibi ödünç verme işlemlerine ait detaylar yer almaktadır. "Kitabı İade Al" butonu aracılığıyla ödünçteki kitapların sisteme iade kaydı gerçekleştirilebilir.
 ### 10.Duyuru Listesi
-![image](https://github.com/user-attachments/assets/f9f81994-b3c9-423d-b3e6-fc5c68c3511b)
+![duyurular](https://github.com/user-attachments/assets/b416333f-db3a-4a9f-bf05-5e2c691f0897)
 Bu sayfa, Kütüphane Yönetim Sistemi'nde yayınlanan duyuruların özetini tablo halinde sunar; duyuru numarası, kategorisi, içeriği ve tarihi gibi bilgileri gösterir. Ayrıca, mevcut duyuruları silme ve güncelleme işlevlerinin yanı sıra, yeni duyurular oluşturma imkanı da sağlar.
 ### 11.İadesi Alınan Kitap Listesi
-![image](https://github.com/user-attachments/assets/dbd15969-f65f-44c3-9dae-18dad8977455)
-![image](https://github.com/user-attachments/assets/84e07a95-de01-474f-bdb3-c738724c0037)
+![iadealınanliste](https://github.com/user-attachments/assets/ce1a4f9b-204c-4eb5-8142-56df03b5de9f)
+![iadedetaylar](https://github.com/user-attachments/assets/afdd3ae1-f7da-44fa-8b03-87a3d82b24bd)
+
 Bu sayfa, Kütüphane Yönetim Sistemi'nde iadesi gerçekleşmiş kitapların kayıtlarını özet olarak sunar. Her bir kitap iadesine ait temel bilgilerin yanı sıra, "Detaylar" butonu aracılığıyla kitabın ödünç alınma ve iade süreçlerine dair daha fazla bilgiye erişilebilir, 
 bu sayede kitabın zamanında iade edilip edilmediği ve iade edilmediyse kaç gün geciktiği kontrol edilebilir .
 ### 12.İstatistik Bilgileri 
-![image](https://github.com/user-attachments/assets/b8b1e3d4-b04f-4bc0-89cc-5f8575da2888)
+![istatistikler](https://github.com/user-attachments/assets/1aa6ae6b-4dcf-43ff-a5eb-a52d98efc723)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin genel istatistiklerini ve bazı temel yönetim araçlarını bir arada sunan bir gösterge panosudur. En üst kısımda dört adet temel istatistik kartı yer almaktadır:
 $ 7,00 TL yazan yeşil kart, sistemdeki toplam ceza tutarını göstermektedir.
 11 yazan pembe kart, sistemdeki toplam üye sayısını ifade etmektedir.
@@ -54,23 +55,22 @@ $ 7,00 TL yazan yeşil kart, sistemdeki toplam ceza tutarını göstermektedir.
 2 yazan lacivert kart ise, şu anda emanet verilmiş olan kitap sayısını göstermektedir.
 Sayfanın geri kalanında yer alan çeşitli grafikler, dünya haritası ve listeler gibi istatistiksel gösterimler ise, bu temel bilgileri görsel olarak desteklemek ve sayfaya estetik bir görünüm katmak amacıyla eklenmiştir
 ### 13.Linq Kartlar 
-![image](https://github.com/user-attachments/assets/ee6cf362-7308-44ab-9161-db4dde93ffd0)
+![linq](https://github.com/user-attachments/assets/2883f330-86ca-4883-9e89-c81c49143fa3)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin çeşitli önemli istatistiklerini ve temel performans göstergelerini kolayca takip edilebilmesi için kartlar aracılığıyla görselleştirmektedir. Kullanıcılara toplam kitap sayısı, kayıtlı üye sayısı, tahsil edilen ceza tutarı, şu anda ödünçte olan kitap sayısı gibi temel bilgilerin yanı sıra, en aktif kullanıcı, en çok okunan kitap ve en başarılı personel gibi daha detaylı analizleri hızlı bir şekilde sunarak sistem hakkında kapsamlı bir genel bakış sağlar.
 ### 14.Kütüphane Fotoğrafları
 ![image](https://github.com/user-attachments/assets/3bb5159b-abf0-41ad-b294-40f288ff0baa)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin fotoğraf bölümüdür. Kütüphane fotoğrafı gösterilir ve yeni fotoğraf yüklemek için "Dosya Seç" butonu bulunur.
 ### 15.Hava Durumu
-![image](https://github.com/user-attachments/assets/6b7957eb-c301-44f9-a058-766588ced898)
+![hava durumu](https://github.com/user-attachments/assets/8fb50298-a693-4cbd-b093-5cb4340989d5)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin "Hava Durumu" bölümüdür. İstanbul için 6 Mayıs 2025 tarihli örnek hava durumu bilgilerini görsel bir kartta sunmaktadır. Bu bilgiler gerçeği yansıtmayıp, sayfanın görünümünü zenginleştirmek için kullanılmıştır.
 ### 16.Hava Kartları
-![image](https://github.com/user-attachments/assets/bbe031b4-c486-46a3-96a1-536b15767086)
+![hava kart](https://github.com/user-attachments/assets/0fa7ee5f-2977-4f00-b1e0-e2e824b006cc)
 Bu sayfa, Kütüphane Yönetim Sistemi kullanıcılarına Türkiye'nin farklı şehirlerindeki (İstanbul, Ankara, İzmir, Antalya, Sinop, Elazığ, Van) doğru ve güncel hava durumu bilgilerini detaylı bir şekilde sunmaktadır. Her bir şehir için mevcut hava durumu ikonu, sıcaklık değeri ve kısa bir açıklama yer alırken, takip eden günlere ait sıcaklık tahminleri de ayrı ayrı gösterilmektedir. 
 ### 17.Grafik
-![image](https://github.com/user-attachments/assets/038170c3-fb19-4304-9c5b-18fb462dc6e0)
+![grafik](https://github.com/user-attachments/assets/d115225a-f1d2-4df6-8aa9-baa2d9f92233)
 Bu sayfa, Kütüphane Yönetim Sistemi'ndeki kitapların yayınevlerine göre yüzdesel dağılımını gösteren bir daire grafiğidir. Her renk bir yayınevini temsil eder ve dilimin büyüklüğü o yayınevinin kitap oranını ifade eder.
 ### 18.Yardım
-![image](https://github.com/user-attachments/assets/63678e78-b282-4fbf-8210-e6eed714c7b5)
-Bu sayfa, Kütüphane Yönetim Sistemi'nin "Yardım Sayfası"dır. Kullanıcılara üye kaydı, kitap arama, kitap ödünç alma ve iade süresi gibi sıkça sorulan soruların kısa cevaplarını sunar. Ayrıca, daha fazla destek için "Bize Ulaşın" butonu içerir.
+![yardım](https://github.com/user-attachments/assets/dd68f2ee-9f77-43a9-9a09-17c33abe82a8)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin "Yardım Sayfası"dır. Kullanıcılara üye kaydı, kitap arama, kitap ödünç alma ve iade süresi gibi sıkça sorulan soruların kısa cevaplarını sunar. Ayrıca, daha fazla destek için "Bize Ulaşın" butonu içerir.
 ## 👁️‍🗨️ B)MİSAFİR(VİTRİN) PANELİ
 ### 1.Kütüphane Anasasayfa
