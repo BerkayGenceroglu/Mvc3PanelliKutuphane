@@ -79,7 +79,7 @@ Bu sayfa, "MVC 5 İLE KÜTÜPHANE SİSTEMİ" adlı uygulamanın kullanıcıları
 ### 2.Kitaplar
 ![image](https://github.com/user-attachments/assets/7b2e51c8-d629-4b59-bb3d-6c9ffd8ffa0b)
 ![image](https://github.com/user-attachments/assets/ea79eef6-14c8-46b6-8367-7edf81c3dfef)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d178352c-6ce4-4ebc-aa77-213aa02f4f00)
 Bu sayfa, "MVC 5 İLE KÜTÜPHANE SİSTEMİ" projemize ait kitapların sergilendiği "KİTAPLARIMIZ" bölümünü göstermektedir. Bu bölümde, kütüphanemizde bulunan çeşitli kitapların kapak görselleri listelenmektedir. Her bir kitap görseli, 
 kullanıcılara kütüphanemizin zengin içeriği hakkında bir fikir vermeyi amaçlamaktadır. Bu listeleme sayesinde kullanıcılar, kütüphanemizde bulunan farklı tür ve yazarlara ait kitapları kolayca keşfedebilirler.
 ### 3.Hakkımızda
