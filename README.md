@@ -77,9 +77,9 @@ Bu sayfa, Kütüphane Yönetim Sistemi'nin "Yardım Sayfası"dır. Kullanıcıla
 ![image](https://github.com/user-attachments/assets/73d3a0e7-b011-4cf0-a656-8666b3bb2cb1)
 Bu sayfa, "MVC 5 İLE KÜTÜPHANE SİSTEMİ" adlı uygulamanın kullanıcıları karşılayan ilk sayfadır. Sayfanın üst kısmında temel navigasyon bağlantıları bulunmaktadır. Ekranda kullanıcıyı karşılayan ana mesaj ve görsel öğeler yer almaktadır
 ### 2.Kitaplar
-![foto1](https://github.com/user-attachments/assets/e5782e9f-d4e4-4a9c-a873-dbb8e79b4d23)
-![foto2](https://github.com/user-attachments/assets/27d377a0-98ea-407c-ad00-f4ac94841326)
-![foto3](https://github.com/user-attachments/assets/f839eff7-5869-47bb-9304-3f9d5a83b6a8)
+![image](https://github.com/user-attachments/assets/7b2e51c8-d629-4b59-bb3d-6c9ffd8ffa0b)
+![image](https://github.com/user-attachments/assets/ea79eef6-14c8-46b6-8367-7edf81c3dfef)
+![Uploading image.png…]()
 Bu sayfa, "MVC 5 İLE KÜTÜPHANE SİSTEMİ" projemize ait kitapların sergilendiği "KİTAPLARIMIZ" bölümünü göstermektedir. Bu bölümde, kütüphanemizde bulunan çeşitli kitapların kapak görselleri listelenmektedir. Her bir kitap görseli, 
 kullanıcılara kütüphanemizin zengin içeriği hakkında bir fikir vermeyi amaçlamaktadır. Bu listeleme sayesinde kullanıcılar, kütüphanemizde bulunan farklı tür ve yazarlara ait kitapları kolayca keşfedebilirler.
 ### 3.Hakkımızda
