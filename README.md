@@ -93,10 +93,10 @@ Bu ekran, "MVC 5 İLE KÜTÜPHANE SİSTEMİ" uygulamasının iletişim sayfasıd
 Bu kısım, "MVC 5 İLE KÜTÜPHANE SİSTEMİ" uygulamasının altındaki iletişim (adres, sosyal medya) ve teknik (MVC5, Bootstrap) bilgileri ile telif hakkını özetler.
 ## 👤C)ÜYE PANELİ 
 ### 1.Kayıt Paneli
-![image](https://github.com/user-attachments/assets/be998568-9b11-4ccf-8053-8c45d30467bc)
+![kayıtol](https://github.com/user-attachments/assets/2d077094-de3a-452c-8d29-def76b27a453)
 Bu sayfa, "MVC5 KÜTÜPHANE YÖNETİM SİSTEMİ" için bir kayıt sayfasıdır. Sol tarafta hoş geldiniz mesajı ve kayıt olma talimatları ile oturum açma/siteye dönme butonları bulunur. Sağda ise ad, soyad, e-posta, kullanıcı adı, şifre, telefon ve okul bilgisi isteyen bir kayıt formu ile şartları kabul etme onay kutusu ve "Kayıt Ol" butonu yer alır ve bu butona tıklandığında üye kaydı oluşturulur.
 ### 2.Oturum Açma Paneli
-![image](https://github.com/user-attachments/assets/a9d118ac-787f-4601-8676-47c810d0a3bc)
+![login](https://github.com/user-attachments/assets/e2639970-a68f-4d55-ac9e-071f7eb3b2cb)
  bu sayfa bir web uygulamasının giriş yapma (login) sayfasıdır. Kütüphane sistemine erişmek için e-posta adresinizi ve şifrenizi ilgili alanlara girmeniz ve ardından "GİRİŞ YAP" butonuna tıklamanız gerekmektedir. Eğer hesabınız yoksa, "KAYIT OL" bağlantısını kullanarak yeni bir hesap oluşturabilirsiniz. Şifrenizi unuttuysanız, "Şifremi Unuttum?" bağlantısını kullanabilirsiniz.
 ### 3.Profil Bilgileri
 ![image](https://github.com/user-attachments/assets/6e9f040c-46a4-49a5-80ce-c6d726552297)
