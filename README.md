@@ -121,5 +121,3 @@ Bu sayfa, kullanıcının "Kitaplarım" bölümüdür. Burada, kullanıcının d
 ![image](https://github.com/user-attachments/assets/f9296625-33d4-4af8-bc44-f5389d5e1bc3)
 Bu sayfa, kütüphanenin önemli duyurularının listesidir. Her duyuru başlık, kısa açıklama ve tarihle gösterilir. Kullanıcılar bu alandan güncel bilgilere ulaşabilir.
 
-
-
