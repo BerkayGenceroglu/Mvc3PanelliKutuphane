@@ -8,7 +8,7 @@ MvcKutuphane, kütüphane kaynaklarının etkin yönetimi için geliştirilmiş 
 ![image](https://github.com/user-attachments/assets/1fc08681-21ad-4eab-a4fa-15c250f1de14)
 Bu sayfa, uygulamanın yönetim paneline erişim sağlamak için kullanılır. Yetkili kullanıcılar, bu form aracılığıyla kullanıcı adı ve şifrelerini girerek sistemin yönetim arayüzüne giriş yapabilirler.
 ### 2.Ana Sayfa
-![image](https://github.com/user-attachments/assets/0fdf86c2-fd69-4fed-96d7-a652feaa7eb2)
+![image](https://github.com/user-attachments/assets/71af6783-3a4d-4db0-b02f-2d5b874da4fc)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin kullanıcı girişinden sonra karşılaşılan ilk ekranıdır. Sistem hakkında genel bir bakış sunar ve kullanıcılara temel işlevlere hızlı erişim imkanı tanır.
 ### 3.Kategori Listesi
 ![image](https://github.com/user-attachments/assets/6a753f7b-617d-4055-8010-a535bd923b5b)
