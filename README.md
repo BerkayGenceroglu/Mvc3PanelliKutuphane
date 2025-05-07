@@ -57,7 +57,7 @@ Sayfanın geri kalanında yer alan çeşitli grafikler, dünya haritası ve list
 ![image](https://github.com/user-attachments/assets/ee6cf362-7308-44ab-9161-db4dde93ffd0)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin çeşitli önemli istatistiklerini ve temel performans göstergelerini kolayca takip edilebilmesi için kartlar aracılığıyla görselleştirmektedir. Kullanıcılara toplam kitap sayısı, kayıtlı üye sayısı, tahsil edilen ceza tutarı, şu anda ödünçte olan kitap sayısı gibi temel bilgilerin yanı sıra, en aktif kullanıcı, en çok okunan kitap ve en başarılı personel gibi daha detaylı analizleri hızlı bir şekilde sunarak sistem hakkında kapsamlı bir genel bakış sağlar.
 ### 14.Kütüphane Fotoğrafları
-![image](https://github.com/user-attachments/assets/b6d8a903-bf5f-4d82-8917-6b89b5ffe44b)
+![image](https://github.com/user-attachments/assets/3bb5159b-abf0-41ad-b294-40f288ff0baa)
 Bu sayfa, Kütüphane Yönetim Sistemi'nin fotoğraf bölümüdür. Kütüphane fotoğrafı gösterilir ve yeni fotoğraf yüklemek için "Dosya Seç" butonu bulunur.
 ### 15.Hava Durumu
 ![image](https://github.com/user-attachments/assets/6b7957eb-c301-44f9-a058-766588ced898)
